@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Vinilos</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <main class="contenedor">
+    <header class="encabezado">
+      <h1 id="titulo-principal">Catálogo de Vinilos</h1>
+      <p>Gestión de colección y stock</p>
+    </header>
+
+    <form id="form-vinilo" class="tarjeta-form">
+      <h2>Agregar nuevo disco</h2>
+      
+      <div class="campo">
+        <label for="input-titulo">Título del disco:</label>
+        <input type="text" id="input-titulo" placeholder="Ej: Brothers in Arms" required>
+      </div>
+
+      <div class="campo">
+        <label for="input-artista">Artista / Banda:</label>
+        <input type="text" id="input-artista" placeholder="Ej: Dire Straits" required>
+      </div>
+
+      <div class="campo">
+        <label for="input-precio">Precio ($):</label>
+        <input type="number" id="input-precio" placeholder="Ej: 52000" min="1" required>
+      </div>
+
+      <button type="submit" id="btn-agregar" class="btn-agregar">+ Agregar Vinilo</button>
+    </form>
+
+    
+    <div class="tarjeta-busqueda">
+      <label for="input-busqueda">Buscar por título o artista:</label>
+      <input type="text" id="input-busqueda" placeholder="Escribe para filtrar en vivo...">
+    </div>
+
+    
+    <div id="feedback" class="oculto"></div>
+
+   
+    <section>
+      <h2 class="titulo-seccion">Discos en Stock</h2>
+      <ul id="contenedor-items" class="contenedor-tarjetas"></ul>
+    </section>
+  </main>
+
+</body>
+</html>
